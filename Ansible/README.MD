@@ -36,8 +36,8 @@ host_key_checking=False
 Fire your first ansible adhoc command as follows <br>
 
 ```
-ansible routers -m ping -vvvv
-ansible routers -m ios_command -a "commands='show version'"
-ansible routers -m ios_command -a "commands='show clock'"
-ansible routers -m ios_command -a "commands='show interfaces'"
+ansible router1 -m ping -vvvv
+ansible router1 -m ios_command -a "commands='show version'"
+ansible router1 -m ios_command -a "commands='show clock'"
+ansible router1 -m ios_command -a "commands='show interfaces'"
 ```
