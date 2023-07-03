@@ -4,10 +4,22 @@
 Append the following to /etc/ansible/hosts file (need sudo rights to do it) <br>
 
 ```
-[routers]
+# Details of one IOS based router which is ALWAYS ON
+[router1]
+sandbox-iosxe-latest-1.cisco.com
+
+[router1:vars]
+ansible_user=admin
+ansible_password=C1sco12345
+ansible_connection=network_cli
+ansible_network_os=ios
+ansible_port=22
+
+# Details of another  IOS based router which is also ALWAYS ON
+[router2]
 sandbox-iosxe-recomm-1.cisco.com
 
-[routers:vars]
+[router2:vars]
 ansible_user=developer
 ansible_password=lastorangerestoreball8876
 ansible_connection=network_cli
